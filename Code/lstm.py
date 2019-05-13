@@ -11,7 +11,7 @@ output_size = 1
 lr = 0.006  # learning rate
 train_time = 100
 # ——————————————————import data——————————————————————
-f = open('C:/Users/Jason/Desktop/dataset_21.csv')
+f = open('dataset_21.csv')
 df = pd.read_csv(f)  # read data
 data = df.iloc[:, 2:10].values  # loc 3-10 columns
 
