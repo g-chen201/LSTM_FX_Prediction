@@ -127,9 +127,9 @@ def prediction(time_step=20):
             test_predict.extend(predict)
         test_y = np.array(test_y) * std[7] + mean[7]
         test_predict = np.array(test_predict) * std[7] + mean[7]
-        acc = np.average(np.abs(test_predict - test_y[:len(test_predict)]) / test_y[:len(test_predict)])  # 偏差程度
+        acc = np.average(np.abs(test_predict - test_y[:len(test_predict)]) / test_y[:len(test_predict)])  # measure deviation
         print("The accuracy of this predict:", acc)
-        # 以折线图表示结果
+        # plot results
         plt.figure()
         plt.plot(list(range(len(test_predict))), test_predict, color='b', )
         plt.plot(list(range(len(test_y))), test_y, color='r')
